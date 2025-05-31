@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrim</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+        padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      border-bottom: 3px solid dodgerblue;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #007bff;
+    }
+
+    section {
+      padding: 80px 20px;
+      min-height: 100vh;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #home {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('homepage_image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    footer {
+      text-align: right;
+      padding: 20px;
+      color: white;
+    }
+
+    .nav-links li a.active-scroll {
+      border-bottom: 2px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.jpg" alt="Agrim Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section hero">
+    <div class="hero-content">
+      <h1>This is Agrim</h1>
+      <p>Aluminium Extrusions | CNC & VMC Machining | Precision Engineered Solutions</p>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+  <div class="section-header">
+    <h2>About Us</h2>
+  </div>
+  <div class="section-content">
+    <div class="glass-box">
+      <p>
+         At <strong>Agrim</strong>, we are driven by innovation, precision, and performance. With decades of industry experience, we specialize in providing high-quality aluminium extrusions along with their accessories and delivering end-to-end CNC and VMC machining solutions. Our advanced manufacturing capabilities and commitment to excellence make us a trusted partner for engineering, automotive, aerospace, and architectural applications. We believe in delivering not just products, but precision-engineered solutions that exceed expectations.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="carousel-container">
+  <button class="carousel-btn prev">&#10094;</button>
+
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <img src="images/gallery1.jpg" alt="Gallery Image 1">
+      <div class="caption">Gallery Image 1</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/gallery3.jpg" alt="Gallery Image 3">
+      <div class="caption">Gallery Image 2</div>
+    </div>
+  </div>
+
+  <button class="carousel-btn next">&#10095;</button>
+</div>
+
+</section>
+
+  <section id="products" class="section products-section">
+  <h2 class="section-title">Products</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>T-Nuts</h3>
+      <p>Durable T-nuts suitable for 20x20, 30x30, and 40x40 profiles. Easy slide-in fitting with M4 to M8 threading.</p>
+    </div>
+    <div class="product-card">
+      <h3>Rhombus Nuts</h3>
+      <p>Precision-engineered rhombus nuts for tight tolerances in heavy-duty frames and fixtures.</p>
+    </div>
+    <div class="product-card">
+      <h3>Aluminium Extrusions</h3>
+      <p>We offer a variety of extrusion profiles (2020, 3030, 4040, 4545, etc.) with anodized finishes and custom lengths.</p>
+    </div>
+    <div class="product-card">
+      <h3>Accessories</h3>
+      <p>Connectors, brackets, end caps, angle plates, and more — everything you need for modular assembly.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="section services-section">
+  <h2 class="section-title">Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>CNC Machining</h3>
+      <p>BLA BLA BLA</p>
+    </div>
+    <div class="service-card">
+      <h3>VMC Machining</h3>
+      <p>BLA BLA BLA</p>
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="section about">
+  <div class="section-header">
+    <h2>Contact Us</h2>
+  </div>
+  <div class="section-content">
+    <div class="glass-box">
+      <p>
+         Email ID: info.agrim@gmail.com
+      </p>
+      <p>
+        Contact Number: +91-9359086828
+      </p>
+      <p>
+        Visit us at: ENTER OFFICIAL ADDRESS
+      </p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+      <p>© 2025 Agrim. All rights reserved.</p>
+    </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links li a");
+
+    function setActiveLink() {
+      let index = sections.length;
+      while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+      navLinks.forEach((link) => link.classList.remove("active-scroll"));
+      navLinks[index].classList.add("active-scroll");
+    }
+
+    function revealOnScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
+        if (sectionTop <= window.innerHeight - sectionHeight / 4) {
+          section.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", () => {
+      setActiveLink();
+      revealOnScroll();
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      revealOnScroll();
+    });
+
+    const track = document.querySelector('.carousel-track');
+  const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
+  </script>
+</body>
+</html>
